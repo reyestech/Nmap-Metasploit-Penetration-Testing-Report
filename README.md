@@ -1,8 +1,12 @@
 # Nmap-Metasploit-Penetration-Testing-Report
 
+<img src="https://i.imgur.com/1kthLJ2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <h1>Hector M. Reyes  | SOC Analysts </h1>
 </h1> Group 17: Script K™  | Stackfull Software </h1>
 <h1> Penetration Test Report: Stackfull Software</h1>
+
+<img src="https://i.imgur.com/EskVhbQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <h2>Description</h2>
 Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to see whether current protocols will protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls. One of your clients, Fullstack Academy, has assigned your team to complete the penetration test for an isolated network.
@@ -35,6 +39,8 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
 - <b> Focused adherence to safety and security requirements.
 - <b> Commitment to contributing to security or privacy communication, such as public research, blogging, presentations, etc.
 
+<img src="https://i.imgur.com/ fzs7d56.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <h2> Rules of Engagement: </h2> 
 1. You are authorized only to scan and attack systems that reside on the same /20 subnet in which the provided Kali Virtual Machine resides.
 2. No social engineering or client-side exploits are permitted.
@@ -62,7 +68,9 @@ Tools of the Trade:
 - <b> Passwords: Tools used to find passwords. Md5decrypt.net and crackstation.net
 - <b> MITRE ATT&CK Framework: a guideline for classifying and describing cyberattacks and intrusions
  
- 
+<img src="https://i.imgur.com/jv2Ichh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/j9Hr9Gh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Network Reconnaissance: (Picture 1.1-1.4) <br /> 
 First, we verified our network IP address and Subnetmask using “ifconfig.” Then, we started a reconnaissance using Nmap and scanned the /20 subnet. After identifying our targets, we scanned their ports 1-5000. Cmd: “nmap -p 1-5000 -sV (insert IP host).” <br /> 
@@ -76,17 +84,17 @@ Findings
 - <b> Host C: ip-172.31.9.237 & Host D: ip-72.31.15.123: on a Windows Web Server, Port 3389/tcp, Microsoft Terminal
  
  
-- <b> Picture 1.1
- 
+Picture 1.1
+<img src="https://i.imgur.com/MsWagSo.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Picture 1.2
- 
+<img src="https://i.imgur.com/FyXDZrm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Picture 1.3
- 
+<img src="https://i.imgur.com/mqoKLJT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Picture 1.4
- 
+<img src="https://i.imgur.com/Ug6peXD.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Initial Compromise: (Picture 1.5-1.7) <br /> 
 We looked for vulnerable targets, such as HTTP servers, that haven't kept up with current network security standards. Host C is running on an unsecured HTTP web server. We browsed the website using its IP and port number (http://172.31.8.66:1013). Using Network Utility Tools to test its defenses and explore the unsecured server, we found the user's IDs and permissions. We explored the host with the command "whoami" to test the server's vulnerabilities and saw we could inject commands into the server. <br /> 
@@ -97,9 +105,11 @@ Findings
 - <b> Picture 1.5
  
 Picture 1.5
- 
+<img src="https://i.imgur.com/hM6GCsm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 Picture 1.6
- 
+<img src="https://i.imgur.com/tLI86qc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 Pivoting (Picture 1.7-2.0) <br /> 
 Now that we see we can run commands on the server, we know it’s vulnerable to our code injections. First, we explored Alice’s machine since she had DevOps privileges by heading to DNS Lookup, Search, then Insert “:ls /home/alice-devops/.ssh.” After we went to the “IP” Finder, we saw “Id_rsa.pem.” We noticed that home/alice-devops/.ssh > id has the SSH key. Now, we can connect this computer to our Kali machine with Alice’s privileges. We pasted the hash into a vim file, then changed the permissions of  “id_rsa.pem” to read and write only using the “chomod” command. To ensure the connection will stay open. SSH clients will refuse to use a key that has file permissions open. <br /> 
 - <b> ssh -i ~/.ssh/id_pem -p 1011 alice-devops@172.22.28.155
@@ -109,23 +119,37 @@ Findings
 - <b> Id_rsa.pem
 - <b> Host’s OpenSSH Private Key
 - <b> Secure connection from our Kali Server to Alice’s Machine
-- <b> Picture 1.7                                                                	Picture 1.8
-        	
+
+Picture 1.7                                                              
+  <img src="https://i.imgur.com/dwZYt6R.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>    	
  
  
+Picture 1.8
+<img src="https://i.imgur.com/rMJd6sn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
-Picture 1.9                                                    	
-                    	Picture 2.0
- 
+Picture 1.9      
+<img src="https://i.imgur.com/rMJd6sn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Picture 2.0
+<img src="https://i.imgur.com/Q4hDDM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 System Reconnaissance: (Picture 2.1-2.4) <br /> 
 Now that we have an SSH connection to our target, we can access the other Machines on their Network by examining the system and files. We looked through her directory and found a maintenance folder and “ls” inside, where we can insert the MD5 hash. <br /> 
-- <b> Picture 2.1                                                    	Picture 2.2  
-                   	
+
+Picture 2.1                            
+<img src="https://i.imgur.com/TNOSPMK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Picture 2.2  
+<img src="https://i.imgur.com/XUBGV0k.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>                  	
  
  
  
- Picture 2.3                                                   	Picture 2.4
+ Picture 2.3                                                   	
+ <img src="https://i.imgur.com/lJatAqu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
+ Picture 2.4
+ <img src="https://i.imgur.com/lJatAqu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Password Cracking (Picture 2.5) <br /> 
 With the user's MD5 hash, we cracked the password using third-party MD5 cracking tools.
@@ -135,8 +159,8 @@ Findings
 - <b> MD5 Hash: 00bfc8c729f5d4d529a412b12c58ddd2
 - <b> Password: “pokemon.”
  
-- <b> Picture 2.5
- 
+Picture 2.5
+ <img src="https://i.imgur.com/3UtxGgR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Metasploit (Picture 2.6-2.) <br /> 
 Now that we have the username and password, we use a Metasploit framework to access other users and a Meteroreter shell to access our targets. Create a Meterpreter shell. Use the command “msfconsole” and load “windows/smb/psexec” with the stolen credentials (user ID and password) and the target IP address. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using our admin status. <br /> 
@@ -145,19 +169,28 @@ Findings
 - <b> Access to Admin server with DevOps privileges.
 - <b> Located file “sevte,txt.”
 - <b> Meteroreter shell to extracted the file’s contents.
-- <b> Picture 2.6
- 
+
+Picture 2.6
+<img src="https://i.imgur.com/rne2NQp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 Picture 2.7
+<img src="https://i.imgur.com/ntcYuPe.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
  
 Picture 2.8
- 
+<img src="https://i.imgur.com/fdeIKqz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
  
 Picture 2.9
- 
+<img src="https://i.imgur.com/JnRj1p8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Picture 3.0
+<img src="https://i.imgur.com/Q9EGKNj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 Conclusion <br /> 
 The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the Network. We detected unauthorized entries into the Network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security.
 
- 
+ <img src="https://i.imgur.com/zNReKXu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 Recommendations <br /> 
 I. Train employees on the best security practices and raise awareness about potential threats. 
 II. Set up routine security updates and patches on the network. 
