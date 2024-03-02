@@ -1,3 +1,6 @@
+<img src="https://i.imgur.com/U2UOAAd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 # Nmap-Metasploit-Penetration-Testing-Report
 
 <img src="https://i.imgur.com/1kthLJ2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -8,11 +11,11 @@
 
 <img src="https://i.imgur.com/EskVhbQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<h2>Description</h2>
+<h2>Description </h2>
 Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to see whether current protocols will protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls. One of your clients, Fullstack Academy, has assigned your team to complete the penetration test for an isolated network.
 <br/><br/>
 
-<h2>Tools Used</h2> 
+<h2>Tools Used </h2> <br/>
 
 - <b> Kali Linux | VMware | VirtualBox </b> 
 - <b> Wireshark | Netcat | Nmap </b>
@@ -21,7 +24,8 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
 - <b> MITRE ATT&CK Framework | 
 
 
-<h2> Responsibilities of the Offensive Security Team </h2>
+<h2>Responsibilities of the Offensive Security Team </h2><br /> 
+
 - <b> Support test planning to include the development of test objectives, configurations, and schedules.
 - <b> Conduct vulnerability assessments, network penetration tests, and engagements.
 - <b> Provide documentation, label vulnerabilities, and actively exploit client-owned networks, hardware, and software.
@@ -29,37 +33,43 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
 - <b> Collaborate with a team to share recommendations and findings and address client questions and concerns.
 - <b> Research new threats, vulnerabilities, security technologies, and countermeasures to provide mitigation and remediation recommendations.
 
-<h2> Requirements </h2> 
-- <b> Familiarization with Windows, Linux, and other Unix operating systems.
-- <b> Understanding of network or device penetration testing methodology.
-- <b> Familiarity with standard assessment and penetration testing tools. (e.g., Nmap, Wireshark, Metasploit, Netcat, Burp Suite)
-- <b> Experience with common testing frameworks. (MITRE ATT&CK framework)
-- <b> Experience conducting code maintenance and review. (Python or equivalent)
-- <b> Experience creating guides and reporting findings that support customers and engagement success criteria.
-- <b> Verbal and written communications must be clear and concise.
-- <b> Focused adherence to safety and security requirements.
-- <b> Commitment to contributing to security or privacy communication, such as public research, blogging, presentations, etc.
+<img src="https://i.imgur.com/IF3hfxK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br/><br/>
 
+Requirements<br/>
 
-<h2> Rules of Engagement: </h2> 
-1. You are authorized only to scan and attack systems that reside on the same /20 subnet in which the provided Kali Virtual Machine resides.
-2. No social engineering or client-side exploits are permitted.
-3. You can request information from the employees or your team.
-4. You can use any of the tools you are provided; there should be no need to download outside tools for this penetration test.
+- <b> Familiarization with Windows, Linux, and other Unix operating systems.<br/>
+- <b> Understanding of network or device penetration testing methodology.<br/>
+- <b> Familiarity with standard assessment and penetration testing tools. (e.g., Nmap, Wireshark, Metasploit, Netcat, Burp Suite)<br/>
+- <b> Experience with common testing frameworks. (MITRE ATT&CK framework)<br/>
+- <b> Experience conducting code maintenance and review. (Python or equivalent)<br/>
+- <b> Experience creating guides and reporting findings that support customers and engagement success criteria.<br/>
+- <b> Verbal and written communications must be clear and concise.<br/>
+- <b> Focused adherence to safety and security requirements.<br/>
+- <b> Commitment to contributing to security or privacy communication, such as public research, blogging, presentations, etc.<br/>
+
+Rules of Engagement <br /> 
+- <b> You are authorized only to scan and attack systems that reside on the same /20 subnet in which the provided Kali Virtual Machine resides. <br /> 
+- <b> No social engineering or client-side exploits are permitted. <br /> 
+- <b> You can request information from the employees or your team. <br /> 
+- <b> You can use any of the tools you are provided; there should be no need to download outside tools for this penetration test. <br /> 
+
 <img src="https://i.imgur.com/fzs7d56.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/><br/>
 
 Intro
 This penetration test aims to identify and secure any vulnerabilities in the client’s network. You will use the various tools provided to test the systems by attempting to exploit their network by employing different techniques that a malicious actor could utilize to access their network. After the analysis, you will report your findings and recommendations for Fullstack Academy to secure its network for the upcoming year.
  
-Vulnerabilities Assessment
+<h2>Vulnerabilities Assessment </h2> <br /> 
 1. Exhibit ethical hacking protocols to evaluate security and identify vulnerabilities in target systems, networks, or system infrastructure.
 2. Perform vulnerability scanning and perform offensive security techniques with the provided tools.
 3. Use modules within Metasploit and establish Meterpreter sessions.
 4. Search for privilege escalation opportunities through lateral movement.
 5. Apply the pass-the-hash technique to take advantage of flaws in NTLM authentication.
+<br/><br/>
  
-Tools of the Trade:
+Tools of the Trade: <br /> 
+
 - <b> Nmap: a network scanner used to discover hosts and services on our network.
 - <b> Wireshark: open-source network packet analyzer.
 - <b> Netcat: Networking utility for reading from and writing network connections using TCP or UDP.
@@ -193,13 +203,16 @@ The penetration test revealed several critical security vulnerabilities in the c
 <img src="https://i.imgur.com/Kz8EtRM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/><br/>
 
-Recommendations<br/>
-I. Train employees on the best security practices and raise awareness about potential threats. 
-II. Set up routine security updates and patches on the network. 
-III. Educate and enforce rules to secure sensitive data on the network. 
-IV. Regularly change credentials on all devices and user accounts. 
-V. Set up systems monitoring and provide instructions for its use. 
-VI. Implement secure tools that detect suspicious activity and provide early warnings.
+Recommendations <br /> 
+I. Train employees on the best security practices and raise awareness about potential threats.  <br /> 
+II. Set up routine security updates and patches on the network.  <br /> 
+III. Educate and enforce rules to secure sensitive data on the network.  <br /> 
+IV. Regularly change credentials on all devices and user accounts.  <br /> 
+V. Set up systems monitoring and provide instructions for its use.  <br /> 
+VI. Implement secure tools that detect suspicious activity and provide early warnings. <br /> 
+
+<img src="https://i.imgur.com/wtXAQNz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 <img src="https://i.imgur.com/zNReKXu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/><br/>
 
