@@ -5,7 +5,7 @@
 
 <img src="https://i.imgur.com/1kthLJ2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<h1>Hector M. Reyes  | SOC Analysts </h1>
+<h1>Hector M. Reyes  | SOC Analyst </h1>
 </h1> Group 17: Script K™  | Stackfull Software </h1>
 <h1> Penetration Test Report: Stackfull Software</h1>
 
