@@ -214,10 +214,11 @@ IV. Regularly change credentials on all devices and user accounts.  <br />
 V. Set up systems monitoring and provide instructions for its use.  <br /> 
 VI. Implement secure tools that detect suspicious activity and provide early warnings. <br /> 
 
-<img src="https://i.imgur.com/wtXAQNz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 
 <img src="https://i.imgur.com/zNReKXu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/><br/>
+<img src="https://i.imgur.com/wtXAQNz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 
