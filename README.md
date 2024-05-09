@@ -1,9 +1,8 @@
-<img src="https://i.imgur.com/U2UOAAd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<img src="https://i.imgur.com/1kthLJ2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 # Nmap-Metasploit-Penetration-Testing-Report
-
-<img src="https://i.imgur.com/1kthLJ2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 <h1>Hector M. Reyes  | SOC Analyst </h1>
 </h1> Group 17: Script K™  | Stackfull Software </h1>
@@ -14,18 +13,19 @@
  ### [Alternative Link | Google Docs | BeEF (Browser Exploitation Framework) Runbook](https://docs.google.com/document/d/e/2PACX-1vT6Smn9QrZ8bDorjYMhP_KapwiKIrAxUesHClG_aRJNhhlGVn-JrjxK6a6-ihdWqzgvXVsI8sT3e5M0/pub)
 
 
-<h2>Description </h2>
+## Description 
 Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to see whether current protocols will protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls. One of your clients, Fullstack Academy, has assigned your team to complete the penetration test for an isolated network.
 <br/><br/>
 
-<h2>Tools Used </h2> <br/>
+<h3>Tools Used </h3>
 
 - <b> Kali Linux | VMware | VirtualBox </b> 
 - <b> Wireshark | Netcat | Nmap </b>
 - <b> Metasploit | Burp Suite </b>
 - <b> Md5decrypt.net | crackstation.net </b>
-- <b> MITRE ATT&CK Framework | 
-
+- <b> MITRE ATT&CK Framework |
+ 
+![a7cb85b39fe3ecf46fae8f92846b370b](https://github.com/reyestech/Nmap-Metasploit-Penetration-Testing-Report/assets/153461962/b42c1bda-4ff4-4440-8ef4-339011566bf6)
 
 <h2>Responsibilities of the Offensive Security Team </h2><br /> 
 
@@ -200,12 +200,13 @@ Picture 2.9 <br/>
 Picture 3.0 <br/>
 <img src="https://i.imgur.com/Q9EGKNj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Conclusion <br /> 
+
+![mdr](https://github.com/reyestech/Nmap-Metasploit-Penetration-Testing-Report/assets/153461962/17b72929-c81a-4be8-aad0-2d18e7746222)
+
+
+## Conclusion <br /> 
 The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the Network. We detected unauthorized entries into the Network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security.
-
-<img src="https://i.imgur.com/Kz8EtRM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/><br/>
-
 Recommendations <br /> 
 I. Train employees on the best security practices and raise awareness about potential threats.  <br /> 
 II. Set up routine security updates and patches on the network.  <br /> 
@@ -214,11 +215,9 @@ IV. Regularly change credentials on all devices and user accounts.  <br />
 V. Set up systems monitoring and provide instructions for its use.  <br /> 
 VI. Implement secure tools that detect suspicious activity and provide early warnings. <br /> 
 
-
-
 <img src="https://i.imgur.com/zNReKXu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/><br/>
-<img src="https://i.imgur.com/wtXAQNz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 
 
 
