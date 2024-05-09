@@ -27,7 +27,7 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
  
 ![a7cb85b39fe3ecf46fae8f92846b370b](https://github.com/reyestech/Nmap-Metasploit-Penetration-Testing-Report/assets/153461962/b42c1bda-4ff4-4440-8ef4-339011566bf6)
 
-<h2>Responsibilities of the Offensive Security Team </h2><br /> 
+<h3>Responsibilities of the Offensive Security Team </h3>
 
 - <b> Support test planning to include the development of test objectives, configurations, and schedules.
 - <b> Conduct vulnerability assessments, network penetration tests, and engagements.
@@ -60,10 +60,10 @@ Rules of Engagement <br />
 <img src="https://i.imgur.com/fzs7d56.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br/><br/>
 
-Intro
+# Intro
 This penetration test aims to identify and secure any vulnerabilities in the client’s network. You will use the various tools provided to test the systems by attempting to exploit their network by employing different techniques that a malicious actor could utilize to access their network. After the analysis, you will report your findings and recommendations for Fullstack Academy to secure its network for the upcoming year.
  
-<h2>Vulnerabilities Assessment </h2> <br /> 
+## Vulnerabilities Assessment <br /> 
 1. Exhibit ethical hacking protocols to evaluate security and identify vulnerabilities in target systems, networks, or system infrastructure.
 2. Perform vulnerability scanning and perform offensive security techniques with the provided tools.
 3. Use modules within Metasploit and establish Meterpreter sessions.
