@@ -6,7 +6,8 @@
 
 <h1>Hector M. Reyes  | SOC Analyst </h1>
 </h1> Group 17: Script K™  | Stackfull Software </h1>
-<h1> Penetration Test Report: Stackfull Software</h1>
+
+## Penetration Test Report: Stackfull Software
 
 <img src="https://i.imgur.com/EskVhbQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
@@ -207,6 +208,7 @@ Picture 3.0 <br/>
 ## Conclusion <br /> 
 The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the Network. We detected unauthorized entries into the Network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security.
 <br/><br/>
+
 Recommendations <br /> 
 I. Train employees on the best security practices and raise awareness about potential threats.  <br /> 
 II. Set up routine security updates and patches on the network.  <br /> 
