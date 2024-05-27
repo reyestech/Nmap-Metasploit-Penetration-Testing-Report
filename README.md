@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/1kthLJ2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
-# Nmap-Metasploit-Penetration-Testing-Report
+# Pentest Report: Nmap & Metasploit
 
 <h1>Hector M. Reyes  | SOC Analyst </h1>
 </h1> Group 17: Script K™  | Stackfull Software </h1>
