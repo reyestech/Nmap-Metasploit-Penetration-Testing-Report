@@ -11,7 +11,7 @@
 
 <img src="https://i.imgur.com/EskVhbQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
- ### [Alternative Link | Google Docs | BeEF (Browser Exploitation Framework) Runbook](https://docs.google.com/document/d/e/2PACX-1vT6Smn9QrZ8bDorjYMhP_KapwiKIrAxUesHClG_aRJNhhlGVn-JrjxK6a6-ihdWqzgvXVsI8sT3e5M0/pub)
+ ### [Alternative Link | Google Docs | Nmap-Metasploit-Penetration-Testing-Runbook](https://docs.google.com/document/d/e/2PACX-1vT6Smn9QrZ8bDorjYMhP_KapwiKIrAxUesHClG_aRJNhhlGVn-JrjxK6a6-ihdWqzgvXVsI8sT3e5M0/pub)
 
 
 ## Description 
