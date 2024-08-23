@@ -7,7 +7,7 @@
 <h1>Hector M. Reyes  | SOC Analyst </h1>
 </h1> Group 17: Script K™  | Stackfull Software </h1>
 
- ### [Google Docs Link | Azure Honeynet and Cloud Network Hardening](https://docs.google.com/document/d/1TbSMzlBtGITVFOTaBGqKXjKY0mPG14p5ZWra-Tj8WNk/pub)
+ ### [Google Docs Link | Penetration Test Report: Stackfull Software](https://docs.google.com/document/d/1X72cU_1jIgYPHmP03cnkLb6wkyNlgnKByCiVYdV3znM/pub)
 
 
 ## Penetration Test Report: Stackfull Software
