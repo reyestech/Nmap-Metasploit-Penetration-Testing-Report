@@ -4,15 +4,15 @@
 
 # Pentest Report: Nmap & Metasploit
 
-<h1>Hector M. Reyes  | SOC Analyst </h1>
-</h1> Group 17: Script K™  | Stackfull Software </h1>
+<h1>Hector M. Reyes  | SOC Analyst | Group 17  | Stackfull Software </h1>
 
  ### [Google Docs Link | Penetration Test Report: Stackfull Software](https://docs.google.com/document/d/1X72cU_1jIgYPHmP03cnkLb6wkyNlgnKByCiVYdV3znM/pub)
 
 
 ## Penetration Test Report: Stackfull Software
 
-<img src="https://i.imgur.com/EskVhbQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+![image](https://github.com/user-attachments/assets/0205dc5a-aa10-49c5-b73e-7f0afd696586)
+
 
  ### [Alternative Link | Google Docs | Nmap-Metasploit-Penetration-Testing-Runbook](https://docs.google.com/document/d/e/2PACX-1vT6Smn9QrZ8bDorjYMhP_KapwiKIrAxUesHClG_aRJNhhlGVn-JrjxK6a6-ihdWqzgvXVsI8sT3e5M0/pub)
 
@@ -202,21 +202,22 @@ Picture 3.0 <br/>
 ![image](https://github.com/user-attachments/assets/69f46517-2d35-4c73-bbe9-f17a5e670be8)
 
 
-## Conclusion <br /> 
+![image](https://github.com/user-attachments/assets/a4f4b870-3412-449c-8cce-9493cb024314)
+
+## Conclusion
+
 The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the network. We detected unauthorized entries into the network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security.
 
-Recommendations: Train employees on best security practices and raise awareness about potential thclient'sbr/> 
-II. Set up routine security updates and patches on the network.  <br /> 
-III. Educate and enforce rules to secure sensitive data on the network.  <br /> 
-IV. Regularly change credentials on all devices and user accounts.  <br /> 
-V. Set up systems monitoring and provide instructions for its use.  <br /> 
-VI. Implement secure tools that detect suspicious activity and provide early warnings. <br /> 
+Recommendations: Train employees on best security practices and raise awareness about potential threats to clients.
+1. Set up routine security updates and patches on the network.
+2. Educate and enforce rules to secure sensitive data on the network.
+3. Regularly change credentials on all devices and user accounts. 
+4. Set up systems monitoring and provide instructions for its use.
+5. Implement secure tools that detect suspicious activity and provide early warnings. 
 
 <img src="https://i.imgur.com/zNReKXu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-![image](https://github.com/user-attachments/assets/753c524b-5352-4b4b-85b6-69f7ea9728b4)
 
-<br/><br/>
 
 
 
