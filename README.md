@@ -21,13 +21,12 @@
 Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to see whether current protocols will protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
 <br/><br/>
 
-<h3>Tools Used </h3>
-
-- <b> Kali Linux | VMware | VirtualBox </b> 
-- <b> Wireshark | Netcat | Nmap </b>
-- <b> Metasploit | Burp Suite </b>
-- <b> Md5decrypt.net | crackstation.net </b>
-- <b> MITRE ATT&CK Framework |
+Tools Used 
+> - Kali Linux | VMware | VirtualBox 
+> - Wireshark | Netcat | Nmap 
+> - Metasploit | Burp Suite 
+> - Md5decrypt.net | crackstation.net 
+> - MITRE ATT&CK Framework 
  
 ![a7cb85b39fe3ecf46fae8f92846b370b](https://github.com/reyestech/Nmap-Metasploit-Penetration-Testing-Report/assets/153461962/b42c1bda-4ff4-4440-8ef4-339011566bf6)
 
@@ -209,11 +208,12 @@ Picture 3.0 <br/>
 The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the network. We detected unauthorized entries into the network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security.
 
 Recommendations: Train employees on best security practices and raise awareness about potential threats to clients.
-1. Set up routine security updates and patches on the network.
-2. Educate and enforce rules to secure sensitive data on the network.
-3. Regularly change credentials on all devices and user accounts. 
-4. Set up systems monitoring and provide instructions for its use.
-5. Implement secure tools that detect suspicious activity and provide early warnings. 
+> 1. We recommend training employees on best security practices and awareness.
+> 2. Set up routine security updates and patches on the network.
+> 3. Educate and enforce rules to secure sensitive data on the network.
+> 4. Regularly change credentials on all devices and user accounts. 
+> 5. Set up systems monitoring and provide instructions for its use.
+> 6. Implement secure tools that detect suspicious activity and provide early warnings. 
 
 <img src="https://i.imgur.com/zNReKXu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
