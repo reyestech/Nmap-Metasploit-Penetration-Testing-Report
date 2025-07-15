@@ -15,7 +15,7 @@ Hector M. Reyes | SOC Analyst | Stackfull Software
 <img src="https://github.com/user-attachments/assets/b067990e-977d-462d-bcb2-81f8001a5050" width="60%" alt="Pentest Report Nmap & Metasploit - Stackfull"/>
 
 ## Scenario
-Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
+Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance with relevant regulations. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
 
 Tools Used 
 > - Kali Linux | VMware | VirtualBox 
