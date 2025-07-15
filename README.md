@@ -15,7 +15,7 @@ Hector M. Reyes | SOC Analyst | Stackfull Software
 <img src="https://github.com/user-attachments/assets/b067990e-977d-462d-bcb2-81f8001a5050" width="60%" alt="Pentest Report Nmap & Metasploit - Stackfull"/>
 
 ## Scenario
-Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to see whether current protocols will protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
+Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
 
 Tools Used 
 > - Kali Linux | VMware | VirtualBox 
@@ -58,7 +58,7 @@ Tools Used
 ----
 
 ## Intro
-This penetration test aims to identify and secure any vulnerabilities in the client's network. You will use the various tools provided to test the systems by attempting to exploit their network using different techniques that a malicious actor might use to access it. After the analysis, you will be able to report your findings and recommendations for Fullstack Academy to secure its network for the upcoming year.
+This penetration test aims to identify and secure any vulnerabilities in the client's network. You will utilize the various tools provided to test the systems by attempting to exploit their network using different techniques that a malicious actor might employ to gain access to it. After the analysis, you will be able to report your findings and recommendations for Fullstack Academy to secure its network for the upcoming year.
  
 ### Vulnerabilities Assessment
 1. Exhibit ethical hacking protocols to evaluate security and identify vulnerabilities in target systems, networks, or system infrastructure.
@@ -70,8 +70,8 @@ This penetration test aims to identify and secure any vulnerabilities in the cli
 ## Tools of the Trade
 - Nmap: a network scanner used to discover hosts and services on our network.
 - Wireshark: open-source network packet analyzer.
-- Netcat: Networking utility for reading from and writing network connections using TCP or UDP.
-- Burp Suite: security application used for penetration testing of web applications
+- Netcat: A Networking utility for reading from and writing network connections using TCP or UDP.
+- Burp Suite: a security application used for penetration testing of web applications
 - Metasploit: provides information about security vulnerabilities and aids in penetration testing.
 - Passwords: Tools used to find passwords. Md5decrypt.net and crackstation.net
 - MITRE ATT&CK Framework: a guideline for classifying and describing cyberattacks and intrusions
@@ -80,7 +80,7 @@ This penetration test aims to identify and secure any vulnerabilities in the cli
 <img src="https://github.com/user-attachments/assets/28a3ecf0-eaa9-4ee7-8680-d02479338543" width="70%" alt="Picture – Mitre2"/>
 
 ## Network Reconnaissance: (Picture 1.1-1.4)
-First, we verified our network IP address and Subnet Mask using "if" on "ig". Then, we started a reconnaissance using Nmap and scanned the /20 subnet. After identifying our targets, we scanned their ports 1-5000. Cmd: “nmAlice 's-5000 -sV (insert IP host).”
+First, we verified our network IP address and Subnet Mask using "if" on "ig". Then, we started a reconnaissance using Nmap and scanned the /20 subnet. After identifying our targets, we scanned their ports 1-5000. Cmd: “nmAlice 's-5000-sV (insert IP host).”
 
 Findings
 - ifconfig: 172.31.11.224/20 | "etmask: 25".255.240.0
@@ -104,7 +104,7 @@ Picture 1.4 <br/>
 
  
 ## Initial Compromise (Picture 1.5-1.7)
-We looked for vulnerable targets, such as HTTP servers, that haven't kept up with current network security standards. Host C is running on a server in the network. We browsed the website using its IP address and port number (http://172.31.8.66:1013). Using the new utility to test its defenses and explore the unsecured server, we found the user's IDs and permissions. We explored the host using the "whoami" command to test the server's vulnerabilities and saw that we could inject commands into the server.
+We identified vulnerable targets, such as HTTP servers, that haven't kept pace with current network security standards. Host C is running on a server in the network. We browsed the website using its IP address and port number (http://172.31.8.66:1013). Using the new utility to test its defenses and explore the unsecured server, we found the user's IDs and permissions. We explored the host using the "whoami" command to test the server's vulnerabilities and saw that we could inject commands into the server.
 
 Findings
 - Fullstack's server (Host A) is an unsecured web server using the HTTP protocol with DevOps privileges.
@@ -130,7 +130,7 @@ Now that we can run commands on the server, we know it's vulnerable to" ions. Fi
 Findings
 - Id_rsa.pem
 - Host's OpenSSH Private Key
-- Secu" e connection from file' liAlice's to Alice's Machine
+- Secure connection from liAlice's file to Alice's Machine
 
 Picture 1.8 <br/>
 <img src="https://github.com/user-attachments/assets/bfe9c3a3-c986-4b86-ba34-2a10e3a7a3e1" width="50%" alt="Picture 1.8"/>
@@ -176,7 +176,7 @@ Picture 2.6 <br/>
 Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using" our admin status." 
 
 Findings
-- Access to Admin server with DevOps privileges.
+- Access to the Admin server with DevOps privileges.
 - Located file "sevte.txt."
 - Meteroreter shell to extract the file's contents.
 
