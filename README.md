@@ -9,12 +9,12 @@ Hector M. Reyes | SOC Analyst | Stackfull Software
 
 <img src="https://github.com/user-attachments/assets/b5c3df39-168b-4b46-9343-39ed36b0a98c" width="30%" alt="Pentest Report Nmap & Metasploit - Tools"/>
 
-
 ---
 
 <img src="https://github.com/user-attachments/assets/b067990e-977d-462d-bcb2-81f8001a5050" width="60%" alt="Pentest Report Nmap & Metasploit - Stackfull"/>
 
-## Scenario
+## **Intro**
+**Scenario**
 Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance with relevant regulations. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
 
 Tools Used 
@@ -34,7 +34,6 @@ Tools Used
 6. Research new threats, vulnerabilities, security technologies, and countermeasures to provide mitigation and remediation recommendations.
 
 <img src="https://github.com/user-attachments/assets/fd2254d7-f423-4262-844f-4b37ef0c22b3" width="60%" alt="Picture – Pen stages1"/>
-
 
 ### Requirements
 - Familiarization with Windows, Linux, and other Unix operating systems.
@@ -197,10 +196,10 @@ Picture 3.0 <br/>
 
 <img src="https://github.com/user-attachments/assets/d463db04-68b7-4da5-8207-b1f5bfbd2c2b" width="60%" alt="Picture Con1"/>
 
-## Conclusion
+## **Conclusion**
 The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the network. We detected unauthorized entries into the network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security.
 
-Recommendations: Train employees on best security practices and raise awareness about potential threats to clients.
+**Recommendations:** Train employees on best security practices and raise awareness about potential threats to clients.
 1. We recommend training employees on best security practices and awareness.
 2. Set up routine security updates and patches on the network.
 3. Educate and enforce rules to secure sensitive data on the network.
