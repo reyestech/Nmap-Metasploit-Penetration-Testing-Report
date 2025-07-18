@@ -1,6 +1,9 @@
+
 <div align="center">
   <img src="https://github.com/user-attachments/assets/1aaeaf5f-b0ce-4417-9873-9fdfcc4f84e2" width="99%" alt="Pentest Report Nmap & Metasploit - Intro"/>
 </div>
+
+---
 
 <h1>  Pentest Report: Nmap & Metasploit </h1>
 Hector M. Reyes | SOC Analyst | Stackfull Software
@@ -23,7 +26,6 @@ Tools Used
 > - Metasploit | Burp Suite 
 > - Md5decrypt.net | crackstation.net 
 > - MITRE ATT&CK Framework 
-
 
 ### Responsibilities of the Offensive Security Team 
 1. Support test planning to include the development of test objectives, configurations, and schedules.
