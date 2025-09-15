@@ -123,7 +123,7 @@ Picture 1.7 <br/>
 
 
 ## Pivoting (Picture 1.8-2.1)
-Now that we can run commands on the server, we know it's vulnerable to" ions. First, we explored Alice's machine by heading to DNS Lookup, Searching, and then inserting "ls /home/alice-devops/.ssh." After we went to the IP Finder, we saw "id_rsa.pem". We noticed that home/alice-devops/.ssh/id has the SSH key. Now, we can connect this computer to our Kali machine with Alice's privileges. We pasted the hash into a Vim file, then changed the permissions of  id_rsa pem to read and write only using the chmod command. To ensure the connection will stay open. SSH clients will refuse to use a key that has file permissions open.
+Now that we can run commands on the server, we know it's vulnerable to" ions. First, we explored Alice's machine by heading to DNS Lookup, Searching, and then inserting "ls /home/alice-devops/.ssh." After we went to the IP Finder, we saw "id_rsa.pem". We noticed that home/alice-devops/.ssh/id has the SSH key. Now, we can connect this computer to our Kali machine with Alice's privileges. We pasted the hash into a Vim file, then changed the permissions of  id_rsa.pem to read and write only using the chmod command. To ensure the connection will stay open. SSH clients will refuse to use a key that has file permissions open.
 
 - ssh -i ~/.ssh/id_pem -p 1011 al"ce" devops@172.22.28.155
 - chmod command: sudo chmod 600 id_rsa.pem
@@ -174,7 +174,7 @@ Picture 2.6 <br/>
 
 
 ## Metasploit (Picture 2.7-3.0)
-Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using" our admin status." 
+Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using our admin status." 
 
 Findings
 - Access to the Admin server with DevOps privileges.
