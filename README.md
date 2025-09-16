@@ -5,12 +5,26 @@
 
 ---
 
-<h1>  Pentest Report: Nmap & Metasploit </h1>
-Hector M. Reyes | SOC Analyst | Stackfull Software
-
-[Google Docs Link | Penetration Test Report: Stackfull Software](https://docs.google.com/document/d/1X72cU_1jIgYPHmP03cnkLb6wkyNlgnKByCiVYdV3znM/pub)
+# Metasploit Pentest – Recon to Exploitation 
+**Author:** Hector M. Reyes | **Role:** SOC Analyst | **Client (Lab):** Stackfull Software
 
 <img src="https://github.com/user-attachments/assets/b5c3df39-168b-4b46-9343-39ed36b0a98c" width="30%" alt="Pentest Report Nmap & Metasploit - Tools"/>
+
+---
+
+## TL;DR
+
+* Performed a penetration test in an **isolated lab network** for Stackfull Software (class project).
+* **Key Findings:**
+
+  * Exposed HTTP service with command injection.
+  * Leaked SSH private key enabling pivot.
+  * Weak credentials recovered from MD5 hash → lateral movement to Windows host via authenticated remote execution.
+* **Impact (lab):** Achieved admin-level access; identified unsecured sensitive data locations.
+* **Top Fixes:** Patch web stack, remove hard-coded/embedded secrets, enforce key/credential hygiene (MFA, rotation), segment network, enable monitoring/alerting.
+
+> **Legal/Ethical Use**
+> The commands and workflows below are provided **only** for authorized testing in your own lab or with **explicit written permission**. Do not use against systems you do not own or administer.
 
 ---
 
@@ -20,12 +34,20 @@ Hector M. Reyes | SOC Analyst | Stackfull Software
 **Scenario**
 Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance with relevant regulations. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
 
-Tools Used 
-> - Kali Linux | VMware | VirtualBox 
-> - Wireshark | Netcat | Nmap 
-> - Metasploit | Burp Suite 
-> - Md5decrypt.net | crackstation.net 
-> - MITRE ATT&CK Framework 
+---
+
+## 🧰 Tools Used (Box)
+
+| Category      | Tool(s)                             | Purpose                            |
+| ------------- | ----------------------------------- | ---------------------------------- |
+| OS / Platform | Kali Linux, VMware/VirtualBox       | Test environment                   |
+| Network       | **Nmap**, **Wireshark**, **Netcat** | Recon, scanning, packet analysis   |
+| Web/App       | **Burp Suite**                      | Web testing & interception         |
+| Exploitation  | **Metasploit Framework**            | Authenticated remote actions (lab) |
+| Passwords     | md5decrypt.net, crackstation.net    | Hash lookups (lab)                 |
+| Framework     | **MITRE ATT\&CK**                   | Technique mapping & reporting      |
+
+---
 
 ### Responsibilities of the Offensive Security Team 
 1. Support test planning to include the development of test objectives, configurations, and schedules.
