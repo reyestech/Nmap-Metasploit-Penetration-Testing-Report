@@ -163,8 +163,7 @@ Picture 2.4 <br/>
 `Picture 2.5`
 
 ## ❺ Password Cracking `Picture 2.6`
-With the user's MD5 hash, we cracked the password using third-party MD5 cracking tools. https://md5decrypt.net.
-
+With the user's MD5 hash, we cracked the password using third-party MD5 cracking tools. https://md5decrypt.net. <br>
 Findings
 - MD5 Hash: 00bfc8c729f5d4d529a412b12c58ddd2
 - Password: "pokemon."
@@ -173,8 +172,7 @@ Findings
 `Picture 2.6`
 
 ## ❻ Metasploit `Picture 2.7-3.0`
-Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using our admin status." 
-
+Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using our admin status."  <br>
 Findings
 - Access to the Admin server with DevOps privileges.
 - Located file "sevte.txt."
@@ -208,7 +206,6 @@ The penetration test revealed several critical security vulnerabilities in the c
 6. Implement secure tools that detect suspicious activity and provide early warnings. 
 
 <img src="https://github.com/user-attachments/assets/1b09844f-ce9c-4d62-8b8f-86c90cda2518" width="70%" alt="Picture Con2"/>
-
 
 
 
