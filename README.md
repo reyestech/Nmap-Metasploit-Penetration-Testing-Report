@@ -17,9 +17,9 @@ Mitigation: Patch stack • Remove secrets • Enforce MFA • Segment network �
 <img src="https://github.com/user-attachments/assets/b067990e-977d-462d-bcb2-81f8001a5050" width="60%" alt="Pentest Report Nmap & Metasploit - Stackfull"/>
 
 ## **Scenario**
-Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance with relevant regulations. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
+Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software Organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance with relevant regulations. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
 
-## 🧰 Tools Used (Box)
+## 🧰 **Tools Used** (Box)
 | Category      | Tool(s)                             | Purpose                            |
 | ------------- | ----------------------------------- | ---------------------------------- |
 | OS / Platform | Kali Linux, VMware/VirtualBox       | Test environment                   |
@@ -31,7 +31,7 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
 
 ---
 
-### Responsibilities of the Offensive Security Team <br>
+## Responsibilities of the Offensive Security Team <br>
 1. Support test planning to include the development of test objectives, configurations, and schedules.
 2. Conduct vulnerability assessments, network penetration tests, and engagements.
 3. Provide documentation, label vulnerabilities, and actively exploit client-owned networks, hardware, and software.
@@ -52,7 +52,7 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
 - Focused adherence to safety and security requirements.
 - Commitment to contributing to security or privacy communication, such as public research, blogging, presentations, etc.
 
-### Rules of Engagement 
+## **Rules of Engagement**
 1. You are authorized only to scan and attack systems that reside on the same /20 subnet in which the provided Kali Virtual Machine resides.
 2. No social engineering or client-side exploits are permitted.
 3. You can request information from employees or your team.
@@ -62,17 +62,17 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
 
 ----
 
-## Intro
+## **Intro**
 This penetration test aims to identify and secure any vulnerabilities in the client's network. You will utilize the various tools provided to test the systems by attempting to exploit their network using different techniques that a malicious actor might employ to gain access to it. After the analysis, you will be able to report your findings and recommendations for Fullstack Academy to secure its network for the upcoming year.
  
-### Vulnerabilities Assessment
+### **Vulnerabilities Assessment**
 1. Exhibit ethical hacking protocols to evaluate security and identify vulnerabilities in target systems, networks, or system infrastructure.
 2. Perform vulnerability scanning and perform offensive security techniques with the provided tools.
 3. Use modules within Metasploit and establish Meterpreter sessions.
 4. Search for privilege escalation opportunities through lateral movement.
 5. Apply the pass-the-hash technique to exploit flaws in NTLM authentication.
  
-## Tools of the Trade
+## ** Tools of the Trade**
 - Nmap: a network scanner used to discover hosts and services on our network.
 - Wireshark: open-source network packet analyzer.
 - Netcat: A Networking utility for reading from and writing network connections using TCP or UDP.
@@ -84,12 +84,12 @@ This penetration test aims to identify and secure any vulnerabilities in the cli
 <img src="https://github.com/user-attachments/assets/464ced81-d082-4912-b155-c1866dc42185" width="70%" alt="Picture – Mitre1"/>
 <img src="https://github.com/user-attachments/assets/28a3ecf0-eaa9-4ee7-8680-d02479338543" width="70%" alt="Picture – Mitre2"/>
 
-## ❶ Network Reconnaissance: `Picture 1.1-1.4` 
+## ❶ **Network Reconnaissance** `Picture 1.1-1.4` 
 First, we verified our network IP address and Subnet Mask using "if" on "ig". Then, we started a reconnaissance using Nmap and scanned the /20 subnet. After identifying our targets, we scanned their ports 1-5000. Cmd: “nmAlice 's-5000-sV (insert IP host).”
 
-Findings
-- ifconfig: 172.31.11.224/20 | "etmask: 25".255.240.0
-- Host A: ip-172.31 "8.66 "s hosting an open web server
+**Findings**
+- ifconfig: 172.31.11.224/20 | "etmask: 25".255.240.0 
+- Host A: ip-172.31 "8.66 "s hosting an open web server 
 - Port 1013/tcp, open HTTP Apache httpd (Ubuntu Server)
 - Host B: ip-172.31.9.6 is running an SSH server
 - Port 2222/tcp, open ssh OpenSSH 3 (Ubuntu Linux)
@@ -107,10 +107,10 @@ Findings
 <img src="https://github.com/user-attachments/assets/15cff798-9bb0-480e-9531-49ebc8b0710d" width="70%" alt="Picture 1.4"/> <br>
 `Picture 1.4`
 
-## ❷ Initial Compromise `Picture 1.5-1.7`
+## ❷ **Initial Compromise** `Picture 1.5-1.7`
 We identified vulnerable targets, such as HTTP servers, that haven't kept pace with current network security standards. Host C is running on a server in the network. We browsed the website using its IP address and port number (http://172.31.8.66:1013). Using the new utility to test its defenses and explore the unsecured server, we found the user's IDs and permissions. We explored the host using the "whoami" command to test the server's vulnerabilities and saw that we could inject commands into the server.
 
-Findings
+**Findings**
 - Fullstack's server (Host A) is an unsecured web server using the HTTP protocol with DevOps privileges.
 - Host A: 172.31.8.66, Port:1013
 - Picture 1.5
@@ -124,12 +124,12 @@ Findings
 <img src="https://github.com/user-attachments/assets/1c40f967-fec8-48cb-b64d-4eb108355cd7" width="50%" alt="Picture 1.7"/> <br>
 `Picture 1.7`
 
-## ❸ Pivoting `Picture 1.8-2.1`
+## ❸ **Pivoting** `Picture 1.8-2.1`
 Now that we can run commands on the server, we know it's vulnerable to" ions. First, we explored Alice's machine by heading to DNS Lookup, Searching, and then inserting "ls /home/alice-devops/.ssh." After we went to the IP Finder, we saw "id_rsa.pem". We noticed that home/alice-devops/.ssh/id has the SSH key. Now, we can connect this computer to our Kali machine with Alice's privileges. We pasted the hash into a Vim file, then changed the permissions of  id_rsa.pem to read and write only using the chmod command. To ensure the connection will stay open. SSH clients will refuse to use a key that has file permissions open.
 - ssh -i ~/.ssh/id_pem -p 1011 al"ce" devops@172.22.28.155
 - chmod command: sudo chmod 600 id_rsa.pem
 
-Findings
+**Findings**
 - Id_rsa.pem
 - Host's OpenSSH Private Key
 - Secure connection from liAlice's file to Alice's Machine
@@ -146,7 +146,7 @@ Findings
 <img src="https://github.com/user-attachments/assets/c1950524-a2d1-4b43-9d35-214aab6112df" width="40%" alt="Picture 2.1"/> <br>
 `Picture 2.1`
 
-## ❹ System Reconnaissance: `Picture 2.2-2.5`
+## ❹ **System Reconnaissance** `Picture 2.2-2.5`
 Now that the Hosts have an SSH connection to their target, we can access Alice's Machines on Alice's work, such as Alice's system and files. We looked through our directory and found a maintenance folder with an "ls" file inside, where we can insert the MD5 hash.
 
 <img src="https://github.com/user-attachments/assets/776aa745-6402-4607-ab18-1198b2c140b2" width="50%" alt="Picture 2.2"/> <br>
@@ -162,18 +162,20 @@ Picture 2.4 <br/>
 <img src="https://github.com/user-attachments/assets/a0c83e99-5c34-4f43-b6a8-18b3464388a5" width="50%" alt="Picture 2.5"/> <br>
 `Picture 2.5`
 
-## ❺ Password Cracking `Picture 2.6`
-With the user's MD5 hash, we cracked the password using third-party MD5 cracking tools. https://md5decrypt.net. <br>
-Findings
+## ❺ **Password Cracking** `Picture 2.6`
+With the user's MD5 hash, we cracked the password using third-party MD5 cracking tools. https://md5decrypt.net.
+
+**Findings**
 - MD5 Hash: 00bfc8c729f5d4d529a412b12c58ddd2
 - Password: "pokemon."
 
 <img src="https://github.com/user-attachments/assets/23df9055-76e8-41ca-96cd-51638a6e0624" width="50%" alt="Picture 2.6"/> <br>
 `Picture 2.6`
 
-## ❻ Metasploit `Picture 2.7-3.0`
-Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using our admin status."  <br>
-Findings
+## ❻ **Metasploit** `Picture 2.7-3.0`
+Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using our admin status."
+
+**Findings**
 - Access to the Admin server with DevOps privileges.
 - Located file "sevte.txt."
 - Meteroreter shell to extract the file's contents.
@@ -192,12 +194,8 @@ Findings
 
 ----
 
-<img src="https://github.com/user-attachments/assets/d463db04-68b7-4da5-8207-b1f5bfbd2c2b" width="60%" alt="Picture Con1"/>
-
-## **Conclusion**
-The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the network. We detected unauthorized entries into the network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security.
-
-**Recommendations:** Train employees on best security practices and raise awareness about potential threats to clients.
+## **Recommendations:** 
+### Train employees on best security practices and raise awareness about potential threats to clients.
 1. We recommend training employees on best security practices and awareness.
 2. Set up routine security updates and patches on the network.
 3. Educate and enforce rules to secure sensitive data on the network.
@@ -205,8 +203,11 @@ The penetration test revealed several critical security vulnerabilities in the c
 5. Set up systems monitoring and provide instructions for its use.
 6. Implement secure tools that detect suspicious activity and provide early warnings. 
 
+<img src="https://github.com/user-attachments/assets/d463db04-68b7-4da5-8207-b1f5bfbd2c2b" width="60%" alt="Picture Con1"/>
+
+# **Conclusion**
+The penetration test revealed several critical security vulnerabilities in the client's servers, with a significant lack of Network security being the most prominent issue. A malicious attacker could easily exploit these weak points to access private information through the servers and potentially gain unauthorized access to even more sensitive data on the network. We detected unauthorized entries into the network and used that to gain administrative privileges. As a result, we discovered that sensitive data was stored in unsecured locations, which poses a severe threat to the client's security. <br> 
+
 <img src="https://github.com/user-attachments/assets/1b09844f-ce9c-4d62-8b8f-86c90cda2518" width="70%" alt="Picture Con2"/>
-
-
 
 
