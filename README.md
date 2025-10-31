@@ -3,8 +3,6 @@
   <img src="https://github.com/user-attachments/assets/1aaeaf5f-b0ce-4417-9873-9fdfcc4f84e2" width="99%" alt="Pentest Report Nmap & Metasploit - Intro"/>
 </div>
 
----
-
 # Metasploit Pentest – Recon to Exploitation 
 **Author:** Hector M. Reyes | **Role:** SOC Analyst | **Client (Lab):** Stackfull Software
 
@@ -102,7 +100,7 @@ This penetration test aims to identify and secure any vulnerabilities in the cli
 <img src="https://github.com/user-attachments/assets/464ced81-d082-4912-b155-c1866dc42185" width="70%" alt="Picture – Mitre1"/>
 <img src="https://github.com/user-attachments/assets/28a3ecf0-eaa9-4ee7-8680-d02479338543" width="70%" alt="Picture – Mitre2"/>
 
-## Network Reconnaissance: (Picture 1.1-1.4)
+## ❶ Network Reconnaissance: `Picture 1.1-1.4` 
 First, we verified our network IP address and Subnet Mask using "if" on "ig". Then, we started a reconnaissance using Nmap and scanned the /20 subnet. After identifying our targets, we scanned their ports 1-5000. Cmd: “nmAlice 's-5000-sV (insert IP host).”
 
 Findings
@@ -113,20 +111,23 @@ Findings
 - Port 2222/tcp, open ssh OpenSSH 3 (Ubuntu Linux)
 - Host C: ip-172.31.9.237 & Host D: ip-72.31.15.123: on a Windows WeHost server, Port 3389/tcp, Microsoft Terminal
 
-Picture 1.1 <br/>
 <img src="https://github.com/user-attachments/assets/ba76b90c-9df3-4e62-8636-6032452541ae" width="50%" alt="Picture 1.1"/>
 
-Picture 1.2 <br/>
+`Picture 1.1`
+
 <img src="https://github.com/user-attachments/assets/697c6be6-4746-49be-a5c6-96052337c98d" width="50%" alt="Picture 1.2"/>
 
-Picture 1.3 <br/>
+`Picture 1.2`
+
 <img src="https://github.com/user-attachments/assets/9601e8b4-30ee-4784-838e-363dddb6c6e8" width="50%" alt="Picture 1.3"/>
 
-Picture 1.4 <br/>
+`Picture 1.3`
+
 <img src="https://github.com/user-attachments/assets/15cff798-9bb0-480e-9531-49ebc8b0710d" width="70%" alt="Picture 1.4"/>
 
- 
-## Initial Compromise (Picture 1.5-1.7)
+`Picture 1.4`
+
+## ❷ Initial Compromise `Picture 1.5-1.7`
 We identified vulnerable targets, such as HTTP servers, that haven't kept pace with current network security standards. Host C is running on a server in the network. We browsed the website using its IP address and port number (http://172.31.8.66:1013). Using the new utility to test its defenses and explore the unsecured server, we found the user's IDs and permissions. We explored the host using the "whoami" command to test the server's vulnerabilities and saw that we could inject commands into the server.
 
 Findings
@@ -134,19 +135,20 @@ Findings
 - Host A: 172.31.8.66, Port:1013
 - Picture 1.5
 
-Picture 1.5 <br/>
 <img src="https://github.com/user-attachments/assets/7b5ef18f-34a0-43ba-863e-f2ca4ac482ef" width="50%" alt="Picture 1.5"/>
 
-Picture 1.6 <br/>
+`Picture 1.5`
+
 <img src="https://github.com/user-attachments/assets/eadc4251-f439-46ef-9156-0558a6bd0712" width="50%" alt="Picture 1.6"/>
 
-Picture 1.7 <br/>
+`Picture 1.6`
+
 <img src="https://github.com/user-attachments/assets/1c40f967-fec8-48cb-b64d-4eb108355cd7" width="50%" alt="Picture 1.7"/>
 
+`Picture 1.7`
 
-## Pivoting (Picture 1.8-2.1)
+## ❸ Pivoting `Picture 1.8-2.1`
 Now that we can run commands on the server, we know it's vulnerable to" ions. First, we explored Alice's machine by heading to DNS Lookup, Searching, and then inserting "ls /home/alice-devops/.ssh." After we went to the IP Finder, we saw "id_rsa.pem". We noticed that home/alice-devops/.ssh/id has the SSH key. Now, we can connect this computer to our Kali machine with Alice's privileges. We pasted the hash into a Vim file, then changed the permissions of  id_rsa.pem to read and write only using the chmod command. To ensure the connection will stay open. SSH clients will refuse to use a key that has file permissions open.
-
 - ssh -i ~/.ssh/id_pem -p 1011 al"ce" devops@172.22.28.155
 - chmod command: sudo chmod 600 id_rsa.pem
 
@@ -155,47 +157,54 @@ Findings
 - Host's OpenSSH Private Key
 - Secure connection from liAlice's file to Alice's Machine
 
-Picture 1.8 <br/>
 <img src="https://github.com/user-attachments/assets/bfe9c3a3-c986-4b86-ba34-2a10e3a7a3e1" width="50%" alt="Picture 1.8"/>
 
-Picture 1.9 <br/>
+`Picture 1.8`
+
+
 <img src="https://github.com/user-attachments/assets/25db5ce0-cd58-493c-9847-8eaf60bd17ba" width="50%" alt="Picture 1.9"/>
 
-Picture 2.0 <br/>
+`Picture 1.9`
+
 <img src="https://github.com/user-attachments/assets/8c18ae72-a418-420d-aa03-1ad634e661c8" width="50%" alt="Picture 2.0"/>
 
-Picture 2.1 <br/>
+`Picture 2.0`
+
 <img src="https://github.com/user-attachments/assets/c1950524-a2d1-4b43-9d35-214aab6112df" width="40%" alt="Picture 2.1"/>
 
+`Picture 2.1`
 
-## System Reconnaissance: (Picture 2.2-2.5) 
+## ❹ System Reconnaissance: `Picture 2.2-2.5`
 Now that the Hosts have an SSH connection to their target, we can access Alice's Machines on Alice's work, such as Alice's system and files. We looked through our directory and found a maintenance folder with an "ls" file inside, where we can insert the MD5 hash.
 
-Picture 2.2 <br/>
 <img src="https://github.com/user-attachments/assets/776aa745-6402-4607-ab18-1198b2c140b2" width="50%" alt="Picture 2.2"/>
+`Picture 2.2`
 
-Picture 2.3 <br/>
 <img src="https://github.com/user-attachments/assets/f14620b5-4a46-4e54-845e-7065a4080d1a" width="50%" alt="Picture 2.3"/>
+
+`Picture 2.3`
 
 Picture 2.4 <br/>
 <img src="https://github.com/user-attachments/assets/fc939aeb-7894-4f8e-b2ff-1ea6c6ffbfa4" width="50%" alt="Picture 2.4"/>
 
-Picture 2.5 <br/>
+`Picture 2.4`
+
 <img src="https://github.com/user-attachments/assets/a0c83e99-5c34-4f43-b6a8-18b3464388a5" width="50%" alt="Picture 2.5"/>
 
+`Picture 2.5`
 
-## Password Cracking (Picture 2.6) 
+## ❺ Password Cracking `Picture 2.6`
 With the user's MD5 hash, we cracked the password using third-party MD5 cracking tools. https://md5decrypt.net.
 
 Findings
 - MD5 Hash: 00bfc8c729f5d4d529a412b12c58ddd2
 - Password: "pokemon."
 
-Picture 2.6 <br/>
 <img src="https://github.com/user-attachments/assets/23df9055-76e8-41ca-96cd-51638a6e0624" width="50%" alt="Picture 2.6"/>
 
+`Picture 2.6`
 
-## Metasploit (Picture 2.7-3.0)
+## ❻ Metasploit `Picture 2.7-3.0`
 Now that we have the username and password, we use a Metasploit framework to access other users and a Meterpreter shell to access our targets. Create a Meterpreter shell. Use the command "msfconsole" and load "windows/smb/psexec" with the stolen credentials (user ID and password) and the IP address of the client's user. Now, we have a secure connection if needed, and we can also change our privileges for ourselves and other users on the server using our admin status." 
 
 Findings
@@ -203,18 +212,21 @@ Findings
 - Located file "sevte.txt."
 - Meteroreter shell to extract the file's contents.
 
-Picture 2.7 <br/>
 <img src="https://github.com/user-attachments/assets/51092ec2-8cf2-489e-b71f-263a04d06e3d" width="50%" alt="Picture 2.7"/>
 
-Picture 2.8 <br/>
+`Picture 2.7`
+
 <img src="https://github.com/user-attachments/assets/dc588e1f-9b4e-464b-a8cc-f8bf0a5ee088" width="70%" alt="Picture 2.8"/>
 
-Picture 2.9 <br/>
+`Picture 2.8`
+
 <img src="https://github.com/user-attachments/assets/3fa2af45-e262-445d-b292-effe269c1a8c" width="40%" alt="Picture 2.9"/>
 
-Picture 3.0 <br/>
+`Picture 2.9`
+
 <img src="https://github.com/user-attachments/assets/87792c29-6c9c-47cd-970c-913d1cc07ec4" width="40%" alt="Picture 3.0"/>
 
+`Picture 3.0`
 
 ----
 
