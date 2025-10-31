@@ -6,36 +6,20 @@
 # Metasploit Pentest – Recon to Exploitation 
 **Author:** Hector M. Reyes | **Role:** SOC Analyst | **Client (Lab):** Stackfull Software
 
-<img src="https://github.com/user-attachments/assets/b5c3df39-168b-4b46-9343-39ed36b0a98c" width="30%" alt="Pentest Report Nmap & Metasploit - Tools"/>
-
----
-
 ## TL;DR
-
-* Performed a penetration test in an **isolated lab network** for Stackfull Software (class project).
-* **Key Findings:**
-
-  * Exposed HTTP service with command injection.
-  * Leaked SSH private key enabling pivot.
-  * Weak credentials recovered from MD5 hash → lateral movement to Windows host via authenticated remote execution.
-* **Impact (lab):** Achieved admin-level access; identified unsecured sensitive data locations.
-* **Top Fixes:** Patch web stack, remove hard-coded/embedded secrets, enforce key/credential hygiene (MFA, rotation), segment network, enable monitoring/alerting.
-
-> **Legal/Ethical Use**
-> The commands and workflows below are provided **only** for authorized testing in your own lab or with **explicit written permission**. Do not use against systems you do not own or administer.
+HTTP Command Injection ➜ SSH Key Leak ➜ MD5 Password Crack ➜ Lateral Movement ➜ Admin Compromise <br>
+Impact: Full admin control and sensitive data exposure. <br>
+Mitigation: Patch stack • Remove secrets • Enforce MFA • Segment network • Monitor threats. <br>
+> **Legal/Ethical Use** The commands and workflows below are provided **only** for authorized testing in your own lab or with **explicit written permission**. Do not use against systems you do not own or administer.
 
 ---
 
 <img src="https://github.com/user-attachments/assets/b067990e-977d-462d-bcb2-81f8001a5050" width="60%" alt="Pentest Report Nmap & Metasploit - Stackfull"/>
 
-## **Intro**
-**Scenario**
+## **Scenario**
 Your team has been assigned as the offensive security team for Stackfull Software. The team will validate internal security controls to determine whether current protocols are sufficient to protect the Stackfull Software organization's clients. The team will provide services to external clients to validate their security controls and ensure compliance with relevant regulations. One of your clients, Fullstack Academy, has assigned your team to conduct a penetration test on an isolated network.
 
----
-
 ## 🧰 Tools Used (Box)
-
 | Category      | Tool(s)                             | Purpose                            |
 | ------------- | ----------------------------------- | ---------------------------------- |
 | OS / Platform | Kali Linux, VMware/VirtualBox       | Test environment                   |
@@ -47,7 +31,7 @@ Your team has been assigned as the offensive security team for Stackfull Softwar
 
 ---
 
-### Responsibilities of the Offensive Security Team 
+### Responsibilities of the Offensive Security Team <br>
 1. Support test planning to include the development of test objectives, configurations, and schedules.
 2. Conduct vulnerability assessments, network penetration tests, and engagements.
 3. Provide documentation, label vulnerabilities, and actively exploit client-owned networks, hardware, and software.
@@ -111,20 +95,16 @@ Findings
 - Port 2222/tcp, open ssh OpenSSH 3 (Ubuntu Linux)
 - Host C: ip-172.31.9.237 & Host D: ip-72.31.15.123: on a Windows WeHost server, Port 3389/tcp, Microsoft Terminal
 
-<img src="https://github.com/user-attachments/assets/ba76b90c-9df3-4e62-8636-6032452541ae" width="50%" alt="Picture 1.1"/>
-
+<img src="https://github.com/user-attachments/assets/ba76b90c-9df3-4e62-8636-6032452541ae" width="50%" alt="Picture 1.1"/> <br>
 `Picture 1.1`
 
-<img src="https://github.com/user-attachments/assets/697c6be6-4746-49be-a5c6-96052337c98d" width="50%" alt="Picture 1.2"/>
-
+<img src="https://github.com/user-attachments/assets/697c6be6-4746-49be-a5c6-96052337c98d" width="50%" alt="Picture 1.2"/> <br>
 `Picture 1.2`
 
-<img src="https://github.com/user-attachments/assets/9601e8b4-30ee-4784-838e-363dddb6c6e8" width="50%" alt="Picture 1.3"/>
-
+<img src="https://github.com/user-attachments/assets/9601e8b4-30ee-4784-838e-363dddb6c6e8" width="50%" alt="Picture 1.3"/> <br>
 `Picture 1.3`
 
-<img src="https://github.com/user-attachments/assets/15cff798-9bb0-480e-9531-49ebc8b0710d" width="70%" alt="Picture 1.4"/>
-
+<img src="https://github.com/user-attachments/assets/15cff798-9bb0-480e-9531-49ebc8b0710d" width="70%" alt="Picture 1.4"/> <br>
 `Picture 1.4`
 
 ## ❷ Initial Compromise `Picture 1.5-1.7`
@@ -135,16 +115,13 @@ Findings
 - Host A: 172.31.8.66, Port:1013
 - Picture 1.5
 
-<img src="https://github.com/user-attachments/assets/7b5ef18f-34a0-43ba-863e-f2ca4ac482ef" width="50%" alt="Picture 1.5"/>
-
+<img src="https://github.com/user-attachments/assets/7b5ef18f-34a0-43ba-863e-f2ca4ac482ef" width="50%" alt="Picture 1.5"/> <br>
 `Picture 1.5`
 
-<img src="https://github.com/user-attachments/assets/eadc4251-f439-46ef-9156-0558a6bd0712" width="50%" alt="Picture 1.6"/>
-
+<img src="https://github.com/user-attachments/assets/eadc4251-f439-46ef-9156-0558a6bd0712" width="50%" alt="Picture 1.6"/> <br>
 `Picture 1.6`
 
-<img src="https://github.com/user-attachments/assets/1c40f967-fec8-48cb-b64d-4eb108355cd7" width="50%" alt="Picture 1.7"/>
-
+<img src="https://github.com/user-attachments/assets/1c40f967-fec8-48cb-b64d-4eb108355cd7" width="50%" alt="Picture 1.7"/> <br>
 `Picture 1.7`
 
 ## ❸ Pivoting `Picture 1.8-2.1`
@@ -157,40 +134,32 @@ Findings
 - Host's OpenSSH Private Key
 - Secure connection from liAlice's file to Alice's Machine
 
-<img src="https://github.com/user-attachments/assets/bfe9c3a3-c986-4b86-ba34-2a10e3a7a3e1" width="50%" alt="Picture 1.8"/>
-
+<img src="https://github.com/user-attachments/assets/bfe9c3a3-c986-4b86-ba34-2a10e3a7a3e1" width="50%" alt="Picture 1.8"/> <br>
 `Picture 1.8`
 
-
-<img src="https://github.com/user-attachments/assets/25db5ce0-cd58-493c-9847-8eaf60bd17ba" width="50%" alt="Picture 1.9"/>
-
+<img src="https://github.com/user-attachments/assets/25db5ce0-cd58-493c-9847-8eaf60bd17ba" width="50%" alt="Picture 1.9"/> <br>
 `Picture 1.9`
 
-<img src="https://github.com/user-attachments/assets/8c18ae72-a418-420d-aa03-1ad634e661c8" width="50%" alt="Picture 2.0"/>
-
+<img src="https://github.com/user-attachments/assets/8c18ae72-a418-420d-aa03-1ad634e661c8" width="50%" alt="Picture 2.0"/> <br>
 `Picture 2.0`
 
-<img src="https://github.com/user-attachments/assets/c1950524-a2d1-4b43-9d35-214aab6112df" width="40%" alt="Picture 2.1"/>
-
+<img src="https://github.com/user-attachments/assets/c1950524-a2d1-4b43-9d35-214aab6112df" width="40%" alt="Picture 2.1"/> <br>
 `Picture 2.1`
 
 ## ❹ System Reconnaissance: `Picture 2.2-2.5`
 Now that the Hosts have an SSH connection to their target, we can access Alice's Machines on Alice's work, such as Alice's system and files. We looked through our directory and found a maintenance folder with an "ls" file inside, where we can insert the MD5 hash.
 
-<img src="https://github.com/user-attachments/assets/776aa745-6402-4607-ab18-1198b2c140b2" width="50%" alt="Picture 2.2"/>
+<img src="https://github.com/user-attachments/assets/776aa745-6402-4607-ab18-1198b2c140b2" width="50%" alt="Picture 2.2"/> <br>
 `Picture 2.2`
 
-<img src="https://github.com/user-attachments/assets/f14620b5-4a46-4e54-845e-7065a4080d1a" width="50%" alt="Picture 2.3"/>
-
+<img src="https://github.com/user-attachments/assets/f14620b5-4a46-4e54-845e-7065a4080d1a" width="50%" alt="Picture 2.3"/> <br>
 `Picture 2.3`
 
 Picture 2.4 <br/>
-<img src="https://github.com/user-attachments/assets/fc939aeb-7894-4f8e-b2ff-1ea6c6ffbfa4" width="50%" alt="Picture 2.4"/>
-
+<img src="https://github.com/user-attachments/assets/fc939aeb-7894-4f8e-b2ff-1ea6c6ffbfa4" width="50%" alt="Picture 2.4"/> <br>
 `Picture 2.4`
 
-<img src="https://github.com/user-attachments/assets/a0c83e99-5c34-4f43-b6a8-18b3464388a5" width="50%" alt="Picture 2.5"/>
-
+<img src="https://github.com/user-attachments/assets/a0c83e99-5c34-4f43-b6a8-18b3464388a5" width="50%" alt="Picture 2.5"/> <br>
 `Picture 2.5`
 
 ## ❺ Password Cracking `Picture 2.6`
@@ -200,8 +169,7 @@ Findings
 - MD5 Hash: 00bfc8c729f5d4d529a412b12c58ddd2
 - Password: "pokemon."
 
-<img src="https://github.com/user-attachments/assets/23df9055-76e8-41ca-96cd-51638a6e0624" width="50%" alt="Picture 2.6"/>
-
+<img src="https://github.com/user-attachments/assets/23df9055-76e8-41ca-96cd-51638a6e0624" width="50%" alt="Picture 2.6"/> <br>
 `Picture 2.6`
 
 ## ❻ Metasploit `Picture 2.7-3.0`
@@ -212,20 +180,16 @@ Findings
 - Located file "sevte.txt."
 - Meteroreter shell to extract the file's contents.
 
-<img src="https://github.com/user-attachments/assets/51092ec2-8cf2-489e-b71f-263a04d06e3d" width="50%" alt="Picture 2.7"/>
-
+<img src="https://github.com/user-attachments/assets/51092ec2-8cf2-489e-b71f-263a04d06e3d" width="50%" alt="Picture 2.7"/> <br>
 `Picture 2.7`
 
-<img src="https://github.com/user-attachments/assets/dc588e1f-9b4e-464b-a8cc-f8bf0a5ee088" width="70%" alt="Picture 2.8"/>
-
+<img src="https://github.com/user-attachments/assets/dc588e1f-9b4e-464b-a8cc-f8bf0a5ee088" width="70%" alt="Picture 2.8"/> <br>
 `Picture 2.8`
 
-<img src="https://github.com/user-attachments/assets/3fa2af45-e262-445d-b292-effe269c1a8c" width="40%" alt="Picture 2.9"/>
-
+<img src="https://github.com/user-attachments/assets/3fa2af45-e262-445d-b292-effe269c1a8c" width="40%" alt="Picture 2.9"/> <br>
 `Picture 2.9`
 
-<img src="https://github.com/user-attachments/assets/87792c29-6c9c-47cd-970c-913d1cc07ec4" width="40%" alt="Picture 3.0"/>
-
+<img src="https://github.com/user-attachments/assets/87792c29-6c9c-47cd-970c-913d1cc07ec4" width="40%" alt="Picture 3.0"/> <br>
 `Picture 3.0`
 
 ----
